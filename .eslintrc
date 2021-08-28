@@ -1,0 +1,27 @@
+{
+  "extends": ["plugin:react-hooks/recommended", "airbnb-base"],
+  "parser": "babel-eslint",
+  "rules": {
+    "consistent-return": 0,
+    "import/prefer-default-export": 0,
+    "indent": 0,
+    "object-curly-newline": "off",
+    "operator-linebreak": 0,
+    "comma-dangle": 0,
+    "implicit-arrow-linebreak": "off",
+    "no-confusing-arrow": "off",
+    "no-sparse-arrays": "off",
+    "lines-between-class-members": "off",
+    "no-plusplus": "off",
+    "func-names": "off",
+    "no-underscore-dangle": "off",
+    "no-void": "off",
+    "no-return-assign": "off",
+    "no-throw-literal": "off",
+    "no-console": "error",
+    "comma-style": "off"
+  },
+  "env": {
+    "browser": true
+  }
+}

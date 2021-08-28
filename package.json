@@ -1,0 +1,84 @@
+{
+  "name": "animated-placeholder",
+  "publishConfig": {
+    "access": "public",
+    "tag": "next"
+  },
+  "version": "0.1.0-beta.1",
+  "description": "A custom React Hook that animates an input placeholder",
+  "main": "dist/animated-placeholder.js",
+  "umd:main": "dist/animated-placeholder.umd.js",
+  "module": "dist/animated-placeholder.m.js",
+  "source": "src/index.js",
+  "types": "types/index.d.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donavon/animated-placeholder.git"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "lint": "eslint src",
+    "xtest": "jest --verbose --coverage --silent",
+    "test": "echo 'no tests'",
+    "test:watch": "jest --watch --runInBand --silent",
+    "prebuild": "npm run lint && rimraf dist && npm t",
+    "build": "microbundle"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "types"
+  ],
+  "keywords": [
+    "utils",
+    "lib",
+    "placeholder",
+    "react",
+    "input"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "author": "Donavon West <github@donavon.com> (https://github.com/donavon)",
+  "peerDependencies": {
+    "react": ">=16.8",
+    "react-dom": ">=16.8"
+  },
+  "dependencies": {
+    "@use-it/instance": "^0.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.9.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "jest": "^26.0.1",
+    "microbundle": "^0.11.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    }
+  }
+}

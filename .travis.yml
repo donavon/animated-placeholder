@@ -1,0 +1,20 @@
+language: node_js
+
+os: linux
+
+node_js:
+  - '10'
+  - '12'
+
+jobs:
+  include:
+    - stage: test
+      script: npm t
+    - stage: publish to npm
+      deploy:
+        skip_cleanup: true
+        provider: npm
+        email: $NPM_EMAIL
+        api_token: $NPM_TOKEN
+        on:
+          tags: true
